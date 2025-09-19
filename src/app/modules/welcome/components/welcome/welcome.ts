@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { LoginUtils, toggleMobileMenu } from '../../../../shared/utils/login-utils/login.utils';
+import { toggleMobileMenu } from '../../../../shared/utils/login-utils/login.utils';
 import { NgClass } from '@angular/common';
 
 @Component({
-  selector: 'login-header',
+  selector: 'welcome-component',
   imports: [NgClass],
-  templateUrl: './login-header.html',
+  templateUrl: './welcome.html',
 })
-export class LoginHeader {
-  util = LoginUtils;
+export class Welcome {
   isMobileMenuOpen = false;
+  isProfileMenuOpen: boolean = false;
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = toggleMobileMenu(this.isMobileMenuOpen);

@@ -1,5 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
-/* global styles */
+@import 'tailwindcss';
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../node_modules/flowbite";
+
+/* Import Third-party override css */
+/* @import "flyonui/src/vendor/flatpickr.css"; */
+/* @import "flyonui/src/vendor/notyf.css"; */
+/* @import "flyonui/src/vendor/datatables.css"; */
+/* @import "flyonui/src/vendor/editor.css"; */
+/* @import "flyonui/src/vendor/fullcalendar.css"; */
+/* @import "flyonui/src/vendor/raty.css"; */
+/* @import "flyonui/src/vendor/waves.css"; */
+/* @import "flyonui/src/vendor/apexcharts.css"; */
+
 html,
 body {
   height: 100%;
@@ -9,5 +22,6 @@ body {
   margin: 0;
   /* font-family: Roboto, 'Helvetica Neue', sans-serif; */
   font-family: 'Poppins', sans-serif;
-  background-color: #111827; /* bg-gray-900 */
+  background-color: #111827;
+  /* bg-gray-900 */
 }

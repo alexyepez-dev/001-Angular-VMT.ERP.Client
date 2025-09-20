@@ -8,3 +8,7 @@ export const LoginUtils = {
 export const toggleMobileMenu = (isMenuOption: boolean) => {
     return !isMenuOption;
 }
+
+export const toggleProfileMenu = (isMenuOption: boolean) => {
+    return !isMenuOption;
+}

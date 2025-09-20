@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './login-form.html',
 })
-export class LoginForm {}
+export class LoginForm {
+  showPassword: boolean = false;
+}

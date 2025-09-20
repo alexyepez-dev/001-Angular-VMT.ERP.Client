@@ -11,22 +11,70 @@
     >
       <h2 class="text-white text-lg font-medium title-font mb-5">Iniciar Sesion</h2>
       <div class="relative mb-4">
-        <label for="full-name" class="leading-7 text-sm text-gray-400">Correo</label>
-        <input
-          type="text"
-          id="full-name"
-          name="full-name"
-          class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-        />
-      </div>
-      <div class="relative mb-4">
-        <label for="email" class="leading-7 text-sm text-gray-400">Contraseña</label>
+        <label for="email" class="leading-7 text-lg text-gray-400">Correo</label>
         <input
           type="email"
           id="email"
           name="email"
+          placeholder="Ingrese su correo"
           class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
         />
+      </div>
+      <div class="relative mb-4">
+        <label for="password" class="leading-7 text-lg text-gray-400">Contraseña</label>
+        <input
+          [type]="showPassword ? 'text' : 'password'"
+          id="password"
+          name="password"
+          placeholder="Ingrese su contraseña"
+          class="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-indigo-900 rounded border border-gray-600 focus:border-indigo-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+        />
+
+        <button
+          type="button"
+          (click)="showPassword = !showPassword"
+          class="absolute mt-7 inset-y-0 right-0 px-3 flex items-center text-gray-400 hover:text-white focus:outline-none"
+          tabindex="-1"
+        >
+          @if (!showPassword) {
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+            />
+          </svg>
+          } @if (showPassword) {
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.542-7a9.956 9.956 0 012.167-3.592M6.15 6.15A9.956 9.956 0 0112 5c4.477 0 8.268 2.943 9.542 7a9.96 9.96 0 01-1.107 2.592M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3l18 18" />
+          </svg>
+          }
+        </button>
       </div>
       <button
         class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg"
